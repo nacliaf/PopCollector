@@ -1,18 +1,18 @@
-# HobbyDB Funko Pop Database
+# Funko Pop Database
 
-This directory contains scraped data from hobbyDB's Funko Pop database with enhanced variant tracking.
+This directory contains the Funko Pop database with enhanced variant tracking.
 
 ## Files
 
-- `funko_pops_hobbydb.csv` - Complete database export from hobbyDB containing Funko Pop information
-- `funko_pops_hobbydb.json` - JSON format for easy app integration
+- `funko_pops.csv` - Complete database export containing Funko Pop information
+- `funko_pops.json` - JSON format for easy app integration
 
 ## CSV Schema
 
 The CSV file contains the following columns:
 
 ### Core Fields
-- `HDBID` - HobbyDB unique identifier
+- `HDBID` - Unique identifier
 - `Name` - Pop name
 - `Number` - Pop number
 - `Series` - Series/category
@@ -32,7 +32,7 @@ The CSV file contains the following columns:
 - `Catalog Item Type Name` - Item type
 - `Scraped Date` - Date when data was scraped
 
-### Variant Tracking Fields (New)
+### Variant Tracking Fields
 - `is_master_variant` - `1` if master variant, `0` if subvariant
 - `master_variant_hdbid` - HDBID of the master variant (empty if this is master)
 - `variant_type` - `"master"` or `"subvariant"`
@@ -45,17 +45,13 @@ The CSV file contains the following columns:
 ## Usage
 
 This data can be used to:
-- Populate local database with hobbyDB information
+- Populate local database with Pop information
 - Cross-reference Pop information
-- Look up HDBIDs for variant fetching
+- Look up IDs for variant fetching
 - Get UPC codes for Pop identification
 - Display master variants in search
 - Show all subvariants in pop detail view
 - Filter autographed variants when toggled
-
-## Data Source
-
-Data scraped from: https://www.hobbydb.com
 
 ## Last Updated
 
@@ -66,12 +62,12 @@ See `Scraped Date` column in CSV for individual record timestamps.
 ### Public Repository (Recommended)
 If the repository is public, access the CSV directly:
 ```
-https://raw.githubusercontent.com/nacliaf/PopCollector/main/data/hobbydb/funko_pops_hobbydb.csv
+https://raw.githubusercontent.com/nacliaf/PopCollector/main/data/database/funko_pops.csv
 ```
 
 Or JSON:
 ```
-https://raw.githubusercontent.com/nacliaf/PopCollector/main/data/hobbydb/funko_pops_hobbydb.json
+https://raw.githubusercontent.com/nacliaf/PopCollector/main/data/database/funko_pops.json
 ```
 
 ## Variant Structure
